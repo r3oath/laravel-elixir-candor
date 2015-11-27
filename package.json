@@ -23,5 +23,10 @@
   "bugs": {
     "url": "https://github.com/r3oath/laravel-elixir-candor/issues"
   },
-  "homepage": "https://github.com/r3oath/laravel-elixir-candor#readme"
+  "homepage": "https://github.com/r3oath/laravel-elixir-candor#readme",
+  "dependencies": {
+    "gulp": "^3.9.0",
+    "gulp-candor": "0.0.3",
+    "laravel-elixir": "^4.0.4"
+  }
 }

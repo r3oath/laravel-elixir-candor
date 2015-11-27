@@ -1,5 +1,6 @@
 var gulp   = require('gulp');
 var Elixir = require('laravel-elixir');
+var candor = require('gulp-candor');
 
 /*
  |----------------------------------------------------------------
@@ -11,37 +12,16 @@ var Elixir = require('laravel-elixir');
  |
  */
 
-Elixir.extend('candor', function(src, output) {
-    config.html.candor = {
-        folder: 'candor',
-        outputFolder: 'resources/views',
-    };
-
+Elixir.extend('candor', function(src, output, options) {
     new Elixir.Task('candor', function() {
-        var paths = prepGulpPaths(src, output);
-
-        return gulp.src(paths.src.path)
-            .pipe(candor())
+        return gulp.src('resources/assets/candor/' + src)
+            .pipe(candor(options))
             .on('error', function(e) {
                 new Elixir.Notification().error(e, 'Candor Compilation Failed');
                 this.emit('end');
             })
-            .pipe(gulp.dest(paths.output.baseDir))
+            .pipe(gulp.dest('resources/views/' + output))
             .pipe(new Elixir.Notification('Candor Compiled!'))
     })
-    .watch(config.get('assets.html.candor.folder') + '/**/*.cdor');
+    .watch('resources/assets/candor' + '/**/*.cdor');
 });
-
-
-/**
- * Prep the Gulp src and output paths.
- *
- * @param  {string|array} src
- * @param  {string|null}  output
- * @return {object}
- */
-var prepGulpPaths = function(src, output) {
-    return new Elixir.GulpPaths()
-        .src(src, config.get('assets.html.candor.folder'))
-        .output(output || config.get('public.html.candor.outputFolder'), 'index.blade.php');
-};
