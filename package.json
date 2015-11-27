@@ -1,0 +1,27 @@
+{
+  "name": "laravel-elixir-candor",
+  "version": "0.0.1",
+  "description": "The official Laravel Elixir Candor plugin.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/r3oath/laravel-elixir-candor.git"
+  },
+  "keywords": [
+    "Laravel",
+    "Elixir",
+    "Candor",
+    "Plugin",
+    "HTML",
+    "Preprocessor"
+  ],
+  "author": "Tristan Strathearn <r3oath@protonmail.ch>",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/r3oath/laravel-elixir-candor/issues"
+  },
+  "homepage": "https://github.com/r3oath/laravel-elixir-candor#readme"
+}
