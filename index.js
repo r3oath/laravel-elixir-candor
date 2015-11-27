@@ -14,6 +14,8 @@ var candor = require('gulp-candor');
 
 Elixir.extend('candor', function(src, output, options) {
     new Elixir.Task('candor', function() {
+        this.log(src, output);
+
         return gulp.src('resources/assets/candor/' + src)
             .pipe(candor(options))
             .on('error', function(e) {
