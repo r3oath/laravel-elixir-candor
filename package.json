@@ -1,6 +1,6 @@
 {
   "name": "laravel-elixir-candor",
-  "version": "0.0.3",
+  "version": "0.0.4",
   "description": "The official Laravel Elixir Candor plugin.",
   "main": "index.js",
   "scripts": {
