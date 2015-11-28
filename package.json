@@ -25,6 +25,6 @@
   },
   "homepage": "https://github.com/r3oath/laravel-elixir-candor#readme",
   "dependencies": {
-    "gulp-candor": "0.0.3"
+    "gulp-candor": "0.0.4"
   }
 }
