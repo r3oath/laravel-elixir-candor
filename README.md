@@ -1,6 +1,8 @@
 # laravel-elixir-candor
 The official Candor Laravel Elixir plugin.
 
+View the official project site for [Candor](http://r3oath.github.io/candor/)
+
 # Installation
 
 Run the following command inside your Laravel project folder
